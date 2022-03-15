@@ -17,7 +17,8 @@ This will open a web interface in your browser like the one below;
  *Local URL: http://localhost:8502*
   *Network URL: http://192.168.0.11:8502*
   
-  Or click the link above and you can enter your query.
+  Or click the link that was provided once you run the streamlit in your command line
+  You can enter your query in the text box given to access your top three Sessions.
 
 
 
