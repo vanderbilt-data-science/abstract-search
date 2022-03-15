@@ -20,7 +20,7 @@ doc_emb = np.loadtxt("abstract-embed.txt", dtype=float)
     # Load data
 df = pd.read_csv("sessions.csv", usecols=['Unique ID', 'Name', 'Description', 'Activity Code', 'Start Time', 'End Time', 'Location Name'])
 #return df#.set_index("Region")
-st.dataframe(df[0:2])
+#st.dataframe(df[0:2])
 #def main():
         # front end elements of the web page
 html_temp = """
@@ -43,35 +43,37 @@ def main():
     model = SentenceTransformer('sentence-transformers/multi-qa-MiniLM-L6-cos-v1')
 
     query =  st.text_input("Enter your query: ")
+
+    if query:
 #st.text_area('Text area')
         #age = st.number_input("Age in Years")
 #Encode query and documents
-    query_emb = model.encode(query).astype(float)
+        query_emb = model.encode(query).astype(float)
 
-#Compute dot score between query and all document embeddings
-    scores = util.dot_score(query_emb, doc_emb.astype(float))[0].cpu().tolist()
+    #Compute dot score between query and all document embeddings
+        scores = util.dot_score(query_emb, doc_emb.astype(float))[0].cpu().tolist()
 
-#Combine docs & scores with other attributes
-    doc_score_pairs = list(zip(docs, scores, titles, start_times, end_times, locations))
+    #Combine docs & scores with other attributes
+        doc_score_pairs = list(zip(docs, scores, titles, start_times, end_times, locations))
 
-# top_k results to return
-    top_k=3
+    # top_k results to return
+        top_k=3
 
-    print(" Your top", top_k, "most similar sessions in the Summit:")
+        print(" Your top", top_k, "most similar sessions in the Summit:")
 
-#Sort by decreasing score
-    doc_score_pairs = sorted(doc_score_pairs, key=lambda x: x[1], reverse=True)
+    #Sort by decreasing score
+        doc_score_pairs = sorted(doc_score_pairs, key=lambda x: x[1], reverse=True)
 
 
-#Output presentation recommendations
-    for doc, score, title, start_time, end_time, location in doc_score_pairs[:top_k]:
+    #Output presentation recommendations
+        for doc, score, title, start_time, end_time, location in doc_score_pairs[:top_k]:
 
-        print("Score: %f" %score)
-        print("Title: %s" %title)
-        print("Abstract: %s" %doc)
-        print("Location: %s" %location)
-        print(f"From {start_time} to {end_time}")
-        print('\n')
+            st.write("Score: %f" %score)
+            st.write("Title: %s" %title)
+            st.write("Abstract: %s" %doc)
+            st.write("Location: %s" %location)
+            st.write(f"From {start_time} to {end_time}")
+            st.write('\n')
 
 
 if __name__ == "__main__":
