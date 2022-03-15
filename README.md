@@ -16,6 +16,8 @@ This will open a web interface in your browser like the one below;
 
  *Local URL: http://localhost:8502*
   *Network URL: http://192.168.0.11:8502*
+  
+  Or click the link above and you can enter your query.
 
 
 
