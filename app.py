@@ -9,7 +9,7 @@ from urllib.error import URLError
 
 # set up title and sidebar
 st.title(" Your Top 3 Important Sessions")
-st.markdown("This application is a dashboard for displaying your top 3 seesions at the summit")
+st.markdown("This application is a dashboard for displaying your top 3 Sessions at the summit")
 
 doc_emb = np.loadtxt("abstract-embed.txt", dtype=float)
 
