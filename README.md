@@ -23,11 +23,11 @@ This project uses Asymmetric semantic search.
 
 ## Huggingface spaces
 
-Please take a look at my spaces at [![Huggingfaces]("https://huggingface.co/spaces/PBusienei/Summit_app_demo")
+Please take a look at my spaces at [Huggingfaces](https://huggingface.co/spaces/PBusienei/Summit_app_demo)
 
 # Model Card
 
-Model card is found [![here]("https://huggingface.co/PBusienei/Nashville_Analytics_Summit_conference_helper")
+Model card is found [here](https://huggingface.co/PBusienei/Nashville_Analytics_Summit_conference_helper)
 
 ## Critical Analysis
 - **speech-to-text**: Create a trained text to speech app using Speech2Text Models in conjunction with Wav2Vec2 (speech translation)
@@ -59,5 +59,5 @@ Coming soon!
 ## Resource Links
 
 * [Sentence Transformer](https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1)
-* [Semantic Search with S-BERT]("https://medium.com/mlearning-ai/semantic-search-with-s-bert-is-all-you-need-951bc710e160")
-*  
+* [Semantic Search S-BERT](https://medium.com/mlearning-ai/semantic-search-with-s-bert-is-all-you-need-951bc710e160)
+* [Huggingface](https://huggingface.co/docs/hub/spaces)
