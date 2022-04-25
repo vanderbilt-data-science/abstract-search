@@ -47,8 +47,8 @@ Run the command below:
 
 This will open a web interface in your browser like the one below;
 
- *Local URL: http://localhost:8502*
-  *Network URL: http://192.168.0.11:8502*
+ *Local URL: http://localhost:8501*
+  *Network URL: http://10.76.227.68:8501*
 
   Or click the link that was provided once you run the streamlit in your command line
   You can enter your search query in the text box given and your will get your top three Sessions of interest.
